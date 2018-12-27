@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/brandTitle.css" />
+  </head>
+  <body>
+    <div class="shop_container">
+      <!-- 头部 -->
+      <div class="shop_header">
+        <div class="logo"></div>
+        <div class="down"></div>
+      </div>
+      <!-- 搜索框 -->
+      <div class="search">
+        <input
+          type="search"
+          class="search_input"
+          placeholder="请输入你要比价的商品"
+        />
+        <input type="button" value="搜索" class="search_btn" />
+      </div>
+
+      <!-- 面包屑导航 -->
+      <div class="bar1">
+        <span>
+          <a href="index.html">首页> </a> <a href="category.html">全部分类></a>
+        </span>
+      </div>
+      <!-- 标题 -->
+      <div class="tit">
+          <h2 >热门品牌排行</h2>
+      </div>
+      
+      <!-- nav -->
+      <div class="nav">
+        <ul>
+          
+        </ul>
+      </div>
+     
+
+    <!-- 面包屑区模板引擎 -->
+    <script type="text/html" id="tpl1">
+      {{each result v i}}
+      <li>
+          <a href="brand.html?brandtitleid={{v.brandTitleId}}&title={{v.brandTitle}}">
+            {{v.brandTitle}}
+          </a>
+        </li>
+        {{/each}}
+    </script>
+
+
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/art-template.js"></script>
+    <script src="./lib/flexible.js"></script>
+    <script src="js/common.js"></script>
+    <script src="./js/brandTitle.js"></script>
+  </body>
+</html>

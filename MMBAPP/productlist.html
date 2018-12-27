@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/productlist.css">
+    <script src="js/rem.js"></script>
+    <script src="js/art-template.js"></script>
+</head>
+<body>
+<header>
+    <div class="right">
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+    <div class="left">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+</header>
+<section class="search">
+    <form action="">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </form>
+</section>
+<section class="show-infor-list">
+    <div class="left">
+        <a href="index.html">首页</a>&gt;
+        <a href="category.html">全部分类</a>&gt;
+        <a class="type" href="javascript:void(0)"></a>&gt;
+    </div>
+    <div class="right">
+        <input type="button" value="筛选">
+    </div>
+</section>
+<section class="product-list">
+     <ul></ul>
+</section>
+
+
+<div class="page">
+    <span>
+        <a href="javascript:void(0)" class="prev">
+            上一页
+        </a>
+    </span>
+    <span>
+        <select id="selectPage" name="select">
+
+        </select>
+    </span>
+    <span>
+        <a href="javascript:void(0)" class="next">
+            下一页
+        </a>
+    </span>
+</div>
+
+
+<footer>
+    <div class="top">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#" class="img">返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+
+
+
+
+
+<script type="text/template" id="tpl1">
+    {{ each result }}
+    <li data-catetory="{{ $value.category }}">
+              <a href="bijia.html?productid={{ $value.productId }}&category={{ category }}&categoryid={{ $value.categoryId }}">
+                  <div class="pic">
+                         <%==$value.productImg  %>
+                  </div>
+                  <div class="infor">
+                      <p class="des">{{ $value.productName }}</p>
+                      <p class="price">{{ $value.productPrice }}</p>
+                      <p class="comment">
+                          <span>{{ $value.productQuote }}</span>
+                          <span>{{ $value.productCom}}</span>
+                      </p>
+                  </div>
+              </a>
+          </li>
+    {{ /each }}
+</script>
+
+
+<script type="text/template" id="tpl2">
+    <%  for(var i =0;i<num;i++){  %>
+    <option class="ops" data-index = "{{i+1}}"  value="1" >
+        <span> {{ page++ }} </span>/{{ num }}
+    </option>
+    <% } %>
+</script>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/productlist.js"></script>
+</body>
+</html>

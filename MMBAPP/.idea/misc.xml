@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/less/baicaijia.less" />
+    <file url="file://$PROJECT_DIR$/less/base.less" />
+    <file url="file://$PROJECT_DIR$/less/bijia.less" />
+    <file url="file://$PROJECT_DIR$/less/brand.less" />
+    <file url="file://$PROJECT_DIR$/less/category.less" />
+    <file url="file://$PROJECT_DIR$/less/coupon.less" />
+    <file url="file://$PROJECT_DIR$/less/couponproduct.less" />
+    <file url="file://$PROJECT_DIR$/less/discount.less" />
+    <file url="file://$PROJECT_DIR$/less/gsproduct.less" />
+    <file url="file://$PROJECT_DIR$/less/index.less" />
+    <file url="file://$PROJECT_DIR$/less/inlanddiscount.less" />
+    <file url="file://$PROJECT_DIR$/less/moneyctrl.less" />
+    <file url="file://$PROJECT_DIR$/less/newstyle.less" />
+    <file url="file://$PROJECT_DIR$/less/productlist.less" />
+    <file url="file://$PROJECT_DIR$/less/sitenav.less" />
+  </component>
+</project>

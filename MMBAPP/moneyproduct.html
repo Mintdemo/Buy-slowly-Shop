@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/moneyproduct.css">
+    <script src="js/rem.js"></script>
+    <script src="js/art-template.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <a href="index.html" class="icon-back"></a>
+    </div>
+    <div class="right">
+        <a href="javascript:void(0)" class="icon-app"></a>
+    </div>
+    <div class="center">
+        <h1>国内折扣</h1>
+    </div>
+</div>
+
+<section class="container">
+
+</section>
+
+<footer>
+    <div class="top">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#" class="img">返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<script type="text/template" id="tpl1">
+    {{ each result }}
+    <h3>{{ $value.productName }}</h3>
+    <div class="infor">
+        <span>{{ $value.productFrom }}</span>
+        <span>{{ $value.productTime }}</span>
+        <span>{{ $value.productTips }}</span>
+    </div>
+    <div class="content">
+        <div class="pic">
+            <%==$value.productImgSm%>
+        </div>
+        <p class="des1">{{ $value.productInfo2 }}</p>
+        <p class="des2">{{ $value.productInfo1 }}</p>
+         <div class="bigImg">
+             <%== $value.productImgLg %>
+         </div>
+    </div>
+    <div class="center">
+         <%==$value.productCity %>
+    </div>
+    <div class="buy">
+        <a href="#">前往购买</a>
+    </div>
+    <div class="tubiao">
+        <img src="images/mmbweixin2.png" alt="">
+    </div>
+    <div class="comment">
+        <%==$value.productComment %>
+    </div>
+    {{ /each }}
+</script>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/moneyproduct.js"></script>
+
+
+
+</body>
+</html>

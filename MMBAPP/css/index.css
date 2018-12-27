@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: #555;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input {
+  font-family: 'Microsoft YaHei';
+}
+/*单行溢出*/
+/*多行溢出 手机端使用*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+.line {
+  height: 0.5rem;
+  background-color: #f1f1f1;
+}
+.menu {
+  padding-bottom: 0.25rem;
+  background-color: #f1f1f1;
+}
+.menu ul {
+  zoom: 1;
+  padding: 0.5rem 0;
+  background-color: white;
+}
+.menu ul:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.menu ul li {
+  width: 25%;
+  float: left;
+}
+.menu ul li a {
+  display: block;
+  padding: 0.6rem 0.6rem 0 0.6rem;
+  font-size: 0.6rem;
+  color: black;
+}
+.menu ul li a p {
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+.menu ul li.hide {
+  display: none;
+}
+.recommend {
+  height: 1.75rem;
+  line-height: 1.75rem;
+  background-color: #ff9000;
+  position: relative;
+}
+.recommend span {
+  color: white;
+  font-size: 0.8rem;
+  margin-left: 0.75rem;
+}
+.recommend img {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5rem;
+}
+.product li {
+  padding: 0.7rem 0 0.7rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.product a {
+  display: block;
+  zoom: 1;
+  position: relative;
+}
+.product a:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.product .pic {
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-left: 0.5rem;
+  float: left;
+}
+.product .infor {
+  margin-left: 7rem;
+  color: #333333;
+  font-size: 0.75rem;
+}
+.product .infor .title {
+  word-break: break-all;
+}
+.product .infor .title p {
+  padding-right: 0.5rem;
+}
+.product .infor .title span {
+  color: #ff6c00;
+}
+.product .infor .bottom {
+  position: absolute;
+  bottom: 0;
+}
+.product .infor .bottom .time {
+  color: #a1a1a1;
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+}
+.product .infor .bottom i {
+  width: 0.7rem;
+  height: 0.75rem;
+  display: inline-block;
+}
+.product .infor .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0.25rem;
+  color: #ccc;
+}
+.more-infor {
+  margin: 0.5rem auto;
+  width: 90%;
+  height: 1.5rem;
+  outline: none;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: black;
+  font-size: 0.65rem;
+  line-height: 1.5rem;
+  border-radius: 0.4rem;
+}
+.more-infor a {
+  color: black;
+}

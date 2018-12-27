@@ -1,0 +1,141 @@
+.line {
+  height: 0.4rem /* 30/75 */;
+  background-color: #f2f2f2;
+}
+.nav {
+  padding-top: 0.666667rem /* 50/75 */;
+  margin-bottom: 0.266667rem /* 20/75 */;
+  border-bottom: 0.133333rem /* 10/75 */ solid #f2f2f2;
+}
+.nav li.hidden {
+  display: none;
+}
+.nav ul {
+  overflow: hidden;
+}
+.nav li {
+  height: 2.333333rem /* 175/75 */;
+  width: 25%;
+  float: left;
+}
+.nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.nav li img {
+  width: 1.4rem /* 105/75 */;
+  height: 1.4rem /* 105/75 */;
+  margin: 0 auto;
+}
+.nav li p {
+  font-size: 0.333333rem /* 25/75 */;
+  color: black;
+  text-align: center;
+  margin-top: 0.2rem /* 15/75 */;
+}
+.product {
+  background-color: #fff;
+}
+.product .tit {
+  padding: 0rem /* 0/75 */ 0.133333rem /* 10/75 */;
+  height: 0.906667rem /* 68/75 */;
+  line-height: 0.906667rem /* 68/75 */;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: 0.4rem /* 30/75 */;
+}
+.product .tit h2 {
+  display: inline-block;
+  font-weight: normal;
+}
+.product .tit i {
+  margin-top: 0.186667rem /* 14/75 */;
+  width: 0.533333rem /* 40/75 */;
+  height: 0.533333rem /* 40/75 */;
+  display: inline-block;
+  float: right;
+  background-image: url(../images/more.png);
+  background-size: cover;
+}
+.product .item {
+  overflow: hidden;
+  position: relative;
+}
+.product .item .pro {
+  overflow: hidden;
+  padding: 0.4rem /* 30/75 */ 0.133333rem /* 10/75 */ 0.4rem /* 30/75 */ 0.166667rem /* 20/75 */;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.product .item img {
+  width: 2.666667rem /* 200/75 */;
+  height: 2.666667rem /* 200/75 */;
+  float: left;
+  margin-right: 0.5rem /* 20/75 */;
+}
+.product .item .desc {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 2.666667rem /* 200/75 */;
+}
+.product .item .desc .txt {
+  font-size: 0.433333rem;
+  /* 25/75 */
+  font-weight: 400;
+}
+.product .item .desc .moeny {
+  font-size: 0.366667rem;
+  /* 20/75 */
+  color: #ff841d;
+}
+.product .item .desc .bot {
+  color: #a1a1a1;
+  font-size: 0.333333rem /* 25/75 */;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.product .item .desc .bot span {
+  text-align: left;
+}
+.product .item .desc .bot i {
+  position: absolute;
+  right: 0;
+  font-size: 0.333333rem /* 25/75 */;
+}
+.more a {
+  display: block;
+  margin: 0.2rem /* 15/75 */ auto;
+  width: 90%;
+  height: 0.906667rem /* 68/75 */;
+  border: 0.013333rem /* 1/75 */ solid #cccccc;
+  border-radius: 0.2rem /* 15/75 */;
+  color: black;
+  text-align: center;
+  line-height: 0.906667rem /* 68/75 */;
+  font-size: 0.333333rem;
+  /* 25/75 */
+}
+.tit {
+  padding: 0rem /* 0/75 */ 0.133333rem /* 10/75 */;
+  height: 0.906667rem /* 68/75 */;
+  line-height: 0.906667rem /* 68/75 */;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: 0.4rem /* 30/75 */;
+}
+.tit h2 {
+  display: inline-block;
+  font-weight: normal;
+}
+.tit i {
+  background-size: cover;
+  margin-top: 0.186667rem /* 14/75 */;
+  width: 0.533333rem /* 40/75 */;
+  height: 0.533333rem /* 40/75 */;
+  display: inline-block;
+  float: right;
+  background-image: url(../images/more.png);
+}

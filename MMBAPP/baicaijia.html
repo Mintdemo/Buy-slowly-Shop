@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+    <script src="js/rem.js"></script>
+    <script src="js/art-template.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <a href="index.html" class="icon-back"></a>
+    </div>
+    <div class="right">
+        <a href="javascript:void(0)" class="icon-app"></a>
+    </div>
+    <div class="center">
+        <h1>白菜价-淘宝内部券</h1>
+    </div>
+</div>
+
+<section class="title">
+       <ul>
+
+       </ul>
+       <div class="search-btn"></div>
+</section>
+
+
+<section class="list">
+    <ul>
+
+    </ul>
+</section>
+<!--<i></i>-->
+<!--<em></em>-->
+<!--<del></del>-->
+<footer>
+    <div class="top">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#" class="img">返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+    <a class="fix" href="#">I</a>
+</footer>
+<script type="text/template" id="tpl2">
+    {{ each result }}
+    <li>
+        <a href=""></a>
+            <div class="pic">
+                <%== $value.productImg  %>
+            </div>
+            <div class="infor">
+                <p class="des"><%== $value.productName %></p>
+                <div class="price">
+                    <%== $value.productPrice %>
+                </div>
+                <div>
+                    <%== $value.productCouponRemain%>
+                </div>
+                <div class="p">
+                   <%== $value.productCoupon%>
+                </div>
+                <div class="g">
+                    <%== $value.productHref%>
+                </div>
+            </div>
+
+    </li>
+    {{ /each }}
+</script>
+<script type="text/template" id="tpl1">
+    {{ each result }}
+    <li data-href="{{ $value.titleId }}">
+        <a href="javascript:void(0)">{{ $value.title }}</a>
+    </li>
+    {{ /each }}
+</script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/baicaijia.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@import "common.less";
+body{
+  background: #efefef;
+}
+//选择框
+.select{
+  background: white;
+  border-bottom: 1/20rem solid #dadada;
+      .search{
+        .fr();
+        width: 46/20rem;
+        height:38/20rem;
+        border-left: 1/20rem solid #dadada;
+        background: url("../images/ic_search.png") center center no-repeat;
+        background-size: 30/20rem 30/20rem;
+        padding:0;
+      }
+           .list{
+             height: 38/20rem;
+             line-height: 38/20rem;
+             margin-right:46/20rem;
+             >li{
+               .fl();
+               position: relative;
+               width:33%;
+               font-size: 16/20rem;
+               color:black;
+               text-align: center;
+               &:before{
+                 content:"";
+                 display:block;
+                 position: absolute;
+                 width: 0;
+                 height:0;
+                 border:6/20rem solid transparent;
+                 border-bottom:6/20rem solid grey;
+                 right:2/20rem;
+                 top:10/20rem;
+               }
+             }
+             li:last-child{
+               text-align: left;
+               &:before{
+                   right:7/20rem;
+               }
+             }
+           }
+    }
+
+
+.price{
+  box-shadow: 0 0.15rem 0.3rem #dddddd
+}
+//
+.shop,
+.area,
+.price{
+  position: absolute;
+  left:0;
+  top:4.2rem;
+display:none;
+  z-index:999;
+  width:100%;
+  background-color: white;
+}
+.shop ul,.price ul,.area ul{
+  box-shadow: 0 3/20rem 6/20rem #dddddd;
+}
+.shop li,
+.area li,
+.price li{
+  line-height: 40/20rem;
+  padding: 0 10/20rem;
+  border-bottom: 1px solid #dadada;
+  font-size: 16/20rem;
+color:black;
+}
+.shop li.active,
+.area li.active,
+.price li.active{
+  color:#ff841d
+}
+
+
+
+.product{
+  padding:6/20rem;
+ ul{
+   .clearfix();
+   li{
+     .fl();
+     width:48%;
+     border-bottom:none;
+     padding:0;
+     margin-bottom:10/20rem;
+     a{
+       display:block;
+       padding-bottom:5/20rem;
+       background-color: white;
+       .pic{
+         width:148/20rem;
+         height:174/20rem;
+         margin-left:0;
+         img{
+           height:100%;
+         }
+       }
+       .infor{
+         margin-left:0;
+         .des{
+           color: #333333;
+           word-break: break-all;
+           padding: 0 6/20rem;
+           height: 14/20rem;
+           overflow: hidden;
+           font-size: 12/20rem;
+           line-height: 14/20rem;
+           font-weight: normal;
+           text-align: left;
+           margin-top: 6/20rem;
+         }
+         .p1{
+           .clearfix();
+           margin-top:5/20rem;
+           .prices{
+             float: left;
+             color: #f8601d;
+             font-size: 20/20rem;
+           }
+           .pincou{
+             float: right;
+             font-size: 14/20rem;
+             color: #FFFFFF;
+             border-radius: 3/20rem;
+             background-color: #ff9501;
+             padding: 4/20rem 10/20rem;
+             text-decoration: none;
+             display: inline-block;
+             margin-right:5/20rem;
+
+           }
+         }
+       }
+
+     }
+   }
+   li:nth-child(2n+1){
+       margin-right:4%;
+
+   }
+ }
+}

@@ -1,0 +1,11 @@
+;(function(){
+    $.ajax({
+        type:"get",
+        url:"http://127.0.0.1:9090/api/getinlanddiscount",
+        dataType:"JSON",
+        success:function(data){
+            console.log(data);
+            $(".discount").html(template("tpl1",data));
+    }
+    });
+})();

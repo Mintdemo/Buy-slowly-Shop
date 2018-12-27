@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/bijia.css" />
+  </head>
+  <body>
+    <div class="shop_container">
+      <!-- 头部 -->
+      <div class="shop_header">
+        <div class="logo"></div>
+        <div class="down"></div>
+      </div>
+      <!-- 搜索框 -->
+      <div class="search">
+        <input
+          type="search"
+          class="search_input"
+          placeholder="请输入你要比价的商品"
+        />
+        <input type="button" value="搜索" class="search_btn" />
+      </div>
+      <!-- 面包屑 -->
+      <div class="bar1"></div>
+      <!-- 介绍 -->
+      <div class="prodesc"><!-- 挖坑 --></div>
+      <!-- 评论 -->
+      <div class="comment">
+        <h3>网友评论</h3>
+        <!-- 挖坑 -->
+      </div>
+      <!-- footer -->
+      <div class="footer">
+        <div class="f_href">
+          <a href="#">登录</a> <a href="#">注册</a>
+          <a href="#" class="gotop">返回顶部</a>
+        </div>
+        <div class="content">
+          <p>
+            <span class="red">手机APP下载</span> 慢慢买手机版 -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 面包屑模板引擎 -->
+    <script type="text/html" id="tpl1">
+      {{each result v i}}
+      <span>
+          <a href="index.html">首页> </a>
+          <a href="category.html">全部分类></a>
+          <a href="#"> <%=v.productName.slice(0,20) %></a>
+           </span>
+        <input type="button" value="筛选" />
+
+        {{/each}}
+      </div>
+    </script>
+    <!-- 商品详情模板引擎 -->
+    <script type="text/html" id="tpl2">
+      <div class='desc'>
+      {{each result v i}}
+      <h2>{{v.productName}}</h2>
+      <%==v.productImg %>
+        <div class="coll"></div>
+      </div>
+      <div class="bijia">
+          <a href="">比价购买</a> <a href="">商品参数</a> <a href="" class="type">评价</a>
+      </div>
+        <div class="sale">
+        <div class="sale_header">
+          <div class="lf">
+            <%==v.bjShop%>
+          </div>
+        </div>
+        <div class="sale_con">
+          实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+      {{/each}}
+    </script>
+    <!-- 评论模板 -->
+    <script type="text/html" id="tpl3">
+      {{each result v i}}
+
+          <div class="content">
+            <div class="tit">
+              <span class="name">{{v.comName}}</span>
+               <span class="time">{{v.comTime}}</span>
+            </div>
+            <p>{{v.comFrom}}</p>
+            <div class="txt">
+             {{v.comContent}}
+             </div>
+          </div>
+          {{/each}}
+    </script>
+    <script type="text/html" id="tpl2"></script>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/art-template.js"></script>
+    <script src="./lib/flexible.js"></script>
+    <script src="js/common.js"></script>
+    <script src="./js/bijia.js"></script>
+  </body>
+</html>

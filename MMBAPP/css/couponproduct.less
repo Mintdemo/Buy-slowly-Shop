@@ -1,0 +1,76 @@
+@import "common.less";
+.header{
+  background-color:  #f4483e;
+}
+//提示框
+.note{
+  font-size: 12/20rem;
+  text-align: center;
+  color: #999;
+  margin: 8/20rem 0;
+}
+
+//信息展示
+.coupon-list{
+  li{
+    //.clearfix();
+    border-bottom:1px solid #e7e7e7;
+    a{
+      .clearfix();
+      display:block;
+      padding:10/20rem;
+      position: relative;
+      &:before{
+        content:"";
+        display:block;
+        width:12/20rem;
+        height:12/20rem;
+        border-top:2/20rem solid lightgrey;
+        border-right:2/20rem solid lightgrey;
+        position: absolute;
+        .center-y();
+        transform: rotate(45deg);
+        right:10/20rem;
+      }
+      .pic{
+         width:100/20rem;
+        height:80/20rem;
+        margin-right:10/20rem;
+        .fl();
+      }
+      .infor{
+        overflow: hidden;
+        padding-right:30/20rem;
+        .des{
+          text-align: justify;
+          font-size: 14/20rem;
+          font-weight: normal;
+          color: #333333;
+          line-height: 20/20rem;
+        }
+        .price{
+          font-size: 14/20rem;
+          font-weight: bold;
+          color:black;
+        }
+        .date{
+          font-size: 12/20rem;
+          color: #EE7700;
+          margin-top: 10/20rem;
+        }
+      }
+    }
+  }
+}
+
+//遮罩层
+.modal{
+  img{
+    width:160/20rem;
+    height:160/20rem;
+    position: absolute;
+    top: 50%;
+    left:50%;
+   transform:translate(-50%,-50%);
+  }
+}

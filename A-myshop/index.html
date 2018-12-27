@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="shop_container">
+      <!-- 头部 -->
+      <div class="shop_header">
+        <div class="logo"></div>
+        <div class="down"></div>
+      </div>
+      <!-- 搜索框 -->
+      <div class="search">
+        <input
+          type="search"
+          class="search_input"
+          placeholder="请输入你要比价的商品"
+        />
+        <input type="button" value="搜索" class="search_btn" />
+      </div>
+      <div class="line"></div>
+      <!-- nav -->
+      <div class="nav">
+        <ul class="show">
+          <!-- 挖个坑 -->
+        </ul>
+      </div>
+      <!-- product 区域 -->
+      <div class="product">
+        <div class="tit">
+          <h2>超值折扣推荐</h2>
+          <i></i>
+        </div>
+        <div class="item"><!-- 挖个坑 --></div>
+      </div>
+      <!-- more -->
+      <div class="more"><a href="moneyctrl.html">更多详细信息>></a></div>
+      <!-- sort -->
+      <div class="tit">
+        <h2>品牌排行</h2>
+        <i></i>
+      </div>
+      <!-- footer -->
+      <div class="footer">
+        <div class="f_href">
+          <a href="#">登录</a> <a href="#">注册</a>
+          <a href="#" class="gotop">返回顶部</a>
+        </div>
+        <div class="content">
+          <p>
+            <span class="red">手机APP下载</span> 慢慢买手机版 -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </div>
+    </div>
+    <!-- nav 模板引擎 -->
+    <script type="text/html" id="tpl1">
+      {{each result v i}}
+      <li>
+          <a href="{{v.titlehref}}">
+            <%==v.img %>
+            <p>{{v.name}}</p></a
+          >
+        </li>
+        {{/each}}
+    </script>
+    <!-- 产品区模板引擎 -->
+    <script type="text/html" id="tpl2">
+      {{each result v i}}
+      <div class="pro">
+          <!-- <img src="{{v.productImgSm}}" alt="" /> -->
+          <%==v.productImgSm %>
+          <div class="desc">
+            <p class="txt">{{v.productName}}</p>
+            <span class="moeny">&yen; {{v.productPinkage}} </span>
+            <div class="bot">
+              <span>天猫旗舰店|{{v.productTime}}</span>
+              <i><%var a = v.productComCount.slice(1,2)  %>
+              <%=a%> </i>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/html" id="tpl2"></script>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/art-template.js"></script>
+    <script src="./lib/flexible.js"></script>
+    <script src="js/common.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

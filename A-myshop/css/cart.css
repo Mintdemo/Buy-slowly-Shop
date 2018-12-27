@@ -1,0 +1,85 @@
+.content {
+  background-color: #fff;
+}
+.content ul.wp {
+  border-radius: 0.333333rem /* 25/75 */;
+  background-color: #ededed;
+}
+.content ul.wp .title_wp a.title {
+  display: block;
+  font-size: 0.466667rem /* 35/75 */;
+  line-height: 1.066667rem /* 80/75 */;
+  color: black;
+  letter-spacing: 0.4em;
+  font-weight: 600;
+  width: 100%;
+  height: 1.066667rem /* 80/75 */;
+  padding-left: 0.266667rem /* 20/75 */;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.content ul.wp .title_wp .title::after {
+  content: '';
+  width: 0.4rem /* 30/75 */;
+  height: 0.4rem /* 30/75 */;
+  display: block;
+  font-weight: 600;
+  border-right: 0.026667rem /* 2/75 */ solid #808080;
+  border-bottom: 0.026667rem /* 2/75 */ solid #808080;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0.2rem /* 30/75 */;
+  right: 0.4rem /* 30/75 */;
+}
+.content ul.wp .title_wp a.title1 {
+  display: block;
+  font-size: 0.466667rem /* 35/75 */;
+  line-height: 1.066667rem /* 80/75 */;
+  color: black;
+  letter-spacing: 0.4em;
+  font-weight: 600;
+  width: 100%;
+  height: 1.066667rem /* 80/75 */;
+  padding-left: 0.266667rem /* 20/75 */;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.content ul.wp .title_wp .title1::after {
+  content: '';
+  width: 0.4rem /* 30/75 */;
+  height: 0.4rem /* 30/75 */;
+  display: block;
+  font-weight: 600;
+  border-right: 0.026667rem /* 2/75 */ solid #808080;
+  border-bottom: 0.026667rem /* 2/75 */ solid #808080;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0.2rem /* 30/75 */;
+  right: 0.4rem /* 30/75 */;
+}
+.content ul.wp .title_wp ul.con {
+  border-top: none;
+  background-color: #fff;
+  overflow: hidden;
+}
+.content ul.wp .title_wp ul.con li {
+  overflow: hidden;
+  width: 33.3%;
+  height: 1.066667rem /* 80/75 */;
+  background: #fff;
+  text-align: center;
+  line-height: 1.066667rem /* 80/75 */;
+  float: left;
+  border-right: 0.013333rem /* 1/75 */ solid #cccccc;
+  border-bottom: 0.013333rem /* 1/75 */ solid #cccccc;
+  box-sizing: border-box;
+  font-size: 0.373333rem /* 28/75 */;
+}
+.content ul.wp .title_wp ul.con li a {
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

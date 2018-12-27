@@ -1,0 +1,51 @@
+.tit {
+  padding: 0.333333rem /* 25/75 */ 0.133333rem /* 10/75 */;
+  h2 {
+    font-size: 0.466667rem /* 35/75 */;
+    line-height: 1.066667rem /* 80/75 */;
+    font-weight: 400;
+    padding-left: 0.266667rem /* 20/75 */;
+    box-sizing: border-box;
+    background-color: #efefef;
+    color: #924400;
+    width: 9.666667rem /* 725/75 */;
+    height: 1.066667rem /* 80/75 */;
+    border: 0.013333rem /* 1/75 */ solid #ccc;
+  }
+}
+.nav {
+  ul {
+    border-radius: 0.133333rem /* 10/75 */;
+    border: 0.013333rem /* 1/75 */ solid #ccc;
+    li:first-child {
+      border-radius: 0.133333rem /* 10/75 */ 0.133333rem /* 10/75 */ 0 0;
+    }
+    li {
+      height: 1.066667rem /* 80/75 */;
+      background-color: #efeeec;
+      line-height: 1.066667rem /* 80/75 */;
+      padding-left: 0.266667rem /* 20/75 */;
+      box-shadow: border-box;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      a {
+        width: 100%;
+        height: 100%;
+        font-size: 0.4rem /* 30/75 */;
+        font-weight: 500;
+        color: black;
+      }
+      a::after {
+        content: '';
+        position: absolute;
+        width: 0.4rem /* 30/75 */;
+        height: 0.4rem /* 30/75 */;
+        border-bottom: 3px solid black;
+        border-right: 3px solid black;
+        transform: translateY(-50%) rotate(45deg);
+        right: 0.266667rem /* 20/75 */;
+        top: 50%;
+      }
+    }
+  }
+}

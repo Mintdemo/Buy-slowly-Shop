@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/gsproduct.css">
+    <script src="js/rem.js"></script>
+    <script src="js/art-template.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <a href="index.html" class="icon-back"></a>
+    </div>
+    <div class="right">
+        <a href="javascript:void(0)" class="icon-app"></a>
+    </div>
+    <div class="center">
+        <h1>凑品单</h1>
+    </div>
+</div>
+
+
+<div class="select">
+    <div class="search">
+    </div>
+    <ul class="list">
+               <li>
+                   京东
+               </li>
+                <li>
+                    华北
+                </li>
+                 <li class="allPrice">
+                     全部价格
+                 </li>
+    </ul>
+</div>
+
+<div class="shop">
+   <ul></ul>
+</div>
+<div class="area">
+    <ul></ul>
+</div>
+<div class="price">
+    <li>全部价格</li>
+</div>
+
+
+<div class="product">
+    <ul>
+
+    </ul>
+</div>
+
+<footer>
+    <div class="top">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#" class="img">返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script type="text/template" id="tpl3">
+    {{ each result }}
+    <li>
+        <a href="">
+       <div class="pic">
+           <img src="{{ $value.productImg}}" alt="">
+       </div>
+        <div class="infor">
+            <p class="des">{{ $value.productName }}</p>
+            <p class="p1">
+                <span class="prices">{{ $value.productPrice }}</span>
+                <span class="pincou">去凑单</span>
+            </p>
+        </div>
+        </a>
+    </li>
+
+    {{ /each }}
+</script>
+
+<script type="text/template" id="tpl2">
+   {{ each result }}
+         <li>{{ $value.areaName }}</li>
+
+    {{ /each }}
+</script>
+
+<script type="text/template" id="tpl1">
+     {{ each result }}
+           <li>{{ $value.shopName }}</li>
+    {{ /each }}
+</script>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/gsproduct.js"></script>
+</body>
+</html>

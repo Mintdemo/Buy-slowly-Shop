@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+    <script src="js/rem.js"></script>
+</head>
+<body>
+<header>
+    <div class="right">
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+    <div class="left">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+</header>
+<section class="search">
+    <form action="">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </form>
+</section>
+<section class="category">
+       <ul>
+       </ul>
+</section>
+<footer>
+    <div class="top">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#" class="img">返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/category.js"></script>
+<script src="js/art-template.js"></script>
+<script type="text/template" id="tpl1">
+    {{ each result }}
+    <li class="cate">
+        <a  data-flag ="true" data-index = "{{ $value.titleId }}" data-titleid = "{{ $value.titleId }}" class="down cate-a" href="javascript:void(0)">{{$value.title}}</a>
+        <ul class="category-goods">
+        </ul>
+    </li>
+    {{ /each }}
+</script>
+
+<script type="text/template" id="tpl2">
+    {{ each result }}
+        <li>
+            <a href="productlist.html?categoryid={{ $value.categoryId }}&category={{ $value.category }}">{{ $value.category }}</a>
+        </li>
+    {{ /each }}
+</script>
+
+
+</body>
+</html>

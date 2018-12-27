@@ -1,0 +1,629 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: #555;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input {
+  font-family: 'Microsoft YaHei';
+  outline: none;
+}
+/*单行溢出*/
+/*多行溢出 手机端使用*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+html {
+  max-width: 780px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+body {
+  background-color: white;
+}
+header {
+  max-width: 780px;
+  min-width: 320px;
+  height: 2.5rem ;
+  background-color: #ff841d;
+}
+header .left {
+  position: relative;
+  margin-right: 2.4rem;
+  height: 2.4rem;
+  line-height: 2.5rem;
+}
+header .left a {
+  display: block;
+  width: 9.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1rem;
+}
+header .right {
+  float: right;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+}
+header .right a {
+  display: block;
+  width: 1.7rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.search {
+  padding: 0.5rem;
+}
+.search form {
+  width: 15rem;
+  height: 1.5rem;
+  zoom: 1;
+}
+.search form:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.search form input[type=text] {
+  float: left;
+  width: 11.5rem;
+  height: 1.5rem;
+  font-size: 0.65rem;
+  background-color: #f1f1f1;
+  text-indent: 0.75rem;
+  color: black;
+  border-radius: 0.75rem;
+}
+.search form input[type=button] {
+  float: right;
+  width: 3.15rem;
+  height: 1.5rem;
+  background: #ff841d;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 0.8rem;
+}
+footer {
+  background-color: #f1f1f1;
+}
+footer .top {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  zoom: 1;
+}
+footer .top:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+footer .top a {
+  width: 33.33%;
+  text-align: center;
+  font-size: 0.7rem;
+  height: 1.65rem;
+  line-height: 1.65rem;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+footer .top a:nth-child(1) {
+  border-left: none;
+}
+footer .top a:nth-child(3) {
+  border-right: none;
+}
+footer .top .img {
+  position: relative;
+}
+footer .top .img:after {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: url("http://www.zuyushop.com/wap/images/top.jpg") 0 0 no-repeat;
+  background-size: 0.75rem;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.5rem;
+}
+footer .bottom {
+  padding-bottom: 0.5rem;
+}
+footer .bottom p {
+  text-align: center;
+  font-size: 0.6rem;
+}
+.show-infor-list {
+  height: 1.9rem;
+  box-sizing: border-box;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 0.05rem solid #ebebeb;
+  border-bottom: 0.05rem solid #ccc;
+  line-height: 1.9rem;
+  padding-left: 0.4rem;
+  font-size: 0.7rem;
+  zoom: 1;
+}
+.show-infor-list:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.show-infor-list .left {
+  float: left;
+}
+.show-infor-list .left a {
+  color: black;
+}
+.show-infor-list .right {
+  float: right;
+}
+.show-infor-list .right input {
+  width: 3rem;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  background-color: lightgrey;
+  color: black;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+}
+.product li {
+  padding: 0.7rem 0 0.7rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.product a {
+  display: block;
+  zoom: 1;
+  position: relative;
+}
+.product a:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.product .pic {
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-left: 0.5rem;
+  float: left;
+}
+.product .infor {
+  margin-left: 7rem;
+  color: #333333;
+  font-size: 0.75rem;
+}
+.product .infor .title {
+  word-break: break-all;
+}
+.product .infor .title p {
+  padding-right: 0.5rem;
+}
+.product .infor .title span {
+  color: #ff6c00;
+}
+.product .infor .bottom {
+  position: absolute;
+  bottom: 0;
+}
+.product .infor .bottom .time {
+  color: #a1a1a1;
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+}
+.product .infor .bottom i {
+  width: 0.7rem;
+  height: 0.75rem;
+  display: inline-block;
+}
+.product .infor .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0.25rem;
+  color: #ccc;
+}
+.page {
+  font-size: 0;
+  margin-top: 0.5rem;
+}
+.page span {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 33.33%;
+  font-size: 0.7rem;
+  height: 1.65rem;
+  line-height: 1.65rem;
+  text-align: center;
+}
+.page span a {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  border-radius: 5px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.7rem;
+}
+.page span #selectPage {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.7rem;
+}
+.header {
+  background: #ff841d;
+  color: #FFFFFF;
+  height: 2.2rem;
+  zoom: 1;
+}
+.header:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.header .left {
+  float: left;
+}
+.header .left a {
+  display: block;
+  width: 2.5rem;
+  height: 2.2rem;
+  position: relative;
+}
+.header .left a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-left: 0.05rem solid white;
+  border-bottom: 0.05rem solid white;
+  transform: rotate(45deg);
+  top: 30%;
+  left: 30%;
+}
+.header .right {
+  float: right;
+}
+.header .right a {
+  display: block;
+  width: 2.5rem;
+  height: 2.2rem;
+  background: url(http://m.manmanbuy.com/images/header_app.png) 0 0 no-repeat;
+  background-size: 1.6rem;
+  background-position: center;
+}
+.header .center {
+  margin: 0 2.5rem;
+  line-height: 2.2rem;
+}
+.header .center h1 {
+  font-size: 1rem;
+  text-align: center;
+}
+.product-list {
+  height: 1.9rem;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 0.05rem solid #ebebeb;
+  border-bottom: 0.05rem solid #ccc;
+  line-height: 1.8rem;
+  padding-left: 0.4rem;
+  font-size: 0.7rem;
+}
+.product-list a {
+  color: black;
+}
+.device {
+  background: #f3f3f3;
+  border: 0.05rem solid #c8c8c8;
+  border-left: none;
+  border-right: none;
+  line-height: 1.8rem;
+  font-size: 0.7rem;
+  padding-left: 0.5rem;
+  color: #874604;
+  font-weight: bold;
+}
+.type li {
+  border-bottom: 0.05rem solid #e7e7e7;
+  padding: 0.5rem;
+  background-image: url(../images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: right center;
+}
+.type li a {
+  display: block;
+}
+.type li a em {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  background: #c9c9c9;
+  color: #FFFFFF;
+  line-height: 20 / rem;
+  vertical-align: top;
+  margin: 0 0.5rem 0 0;
+  font-size: 0.7rem;
+}
+.type li a em.top0 {
+  background-color: #f10e0e;
+}
+.type li a em.top1 {
+  background-color: #ff9314;
+}
+.type li a em.top2 {
+  background-color: #8adf5b;
+}
+.type li a div {
+  display: inline-block;
+}
+.type li a div p:nth-child(1) {
+  color: black;
+  font-size: 0.8rem;
+}
+.type li a div p:nth-child(2) {
+  color: #999;
+  margin-top: 0.15rem;
+  font-size: 0.7rem;
+}
+.sale li {
+  border-bottom: 0.05rem solid #e7e7e7;
+  padding: 0.5rem;
+}
+.sale li a {
+  position: relative;
+  zoom: 1;
+}
+.sale li a:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.sale li a .pic {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+}
+.sale li a .infor {
+  margin-left: 5.8rem;
+}
+.sale li a .infor .des {
+  color: #333333;
+  line-height: 1.1rem;
+  word-break: break-all;
+  color: black;
+  font-size: 0.7rem;
+}
+.sale li a .infor .price {
+  font-size: 0.9rem;
+  color: #ea3900;
+}
+.sale li a .infor .com span {
+  margin-right: 0.5rem;
+  font-size: 0.6rem;
+}
+.firstImg {
+  zoom: 1;
+  padding: 0.5rem;
+}
+.firstImg:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.firstImg img {
+  float: left;
+  width: 5rem;
+  height: 5rem;
+}
+.firstImg p {
+  color: #999999;
+  line-height: 1.1rem;
+  font-size: 0.7rem;
+  word-break: break-all;
+  margin-top: 0.5rem;
+  margin-left: 5.5rem;
+}
+.box {
+  background: #f8f8f8;
+  padding: 0.5rem;
+  border: 0.05rem solid #e7e7e7;
+}
+.box .left {
+  float: left;
+  color: #4f6900;
+  font-size: 0.7rem;
+}
+.box .right {
+  float: right;
+  color: #999999;
+  font-size: 0.7rem;
+}
+.box .content {
+  color: #000000;
+  clear: both;
+  margin-top: 0.5rem;
+  line-height: 1.1rem;
+  font-size: 0.75rem;
+  word-break: break-all;
+}

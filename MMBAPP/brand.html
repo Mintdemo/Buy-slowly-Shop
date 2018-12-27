@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="js/rem.js"></script>
+    <script src="js/art-template.js"></script>
+</head>
+<body>
+<header>
+    <div class="right">
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+    <div class="left">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+</header>
+<section class="search">
+    <form action="">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </form>
+</section>
+
+
+<div class="product-list">
+    <a href="index.html" class="list-title1">首页</a> &gt;
+    <a href="category.html" class="list-title2">全部分类</a> &gt;
+</div>
+
+
+<div class="device">
+    平板电视哪个牌子好
+</div>
+
+
+<ul class="type">
+
+</ul>
+
+<div class="device">
+    平板电视产品销量排行
+</div>
+
+
+<ul class="sale">
+
+</ul>
+
+<div class="device">
+    平板电视新评论</div>
+<div class="total">
+
+</div>
+<!--<div class="firstImg">-->
+
+<!--</div>-->
+
+<div class="comment">
+
+</div>
+
+
+<footer>
+    <div class="top">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#" class="img">返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<script type="text/template" id="tpl3">
+    {{  each result }}
+    <div class="firstImg">
+       <%==str%>
+    </div>
+         <div class="box">
+              <span class="left">{{ $value.comName }}</span>
+             <span class="right">{{ $value.comTime }}</span>
+             <div class="content">{{ $value.comContent }}</div>
+         </div>
+    {{ /each }}
+</script>
+<script type="text/template" id="tpl2">
+       {{ each result }}
+            <li>
+                <a href="bijia.html?productid={{ $value.productId }}">
+                    <div class="pic"><%==$value.productImg %></div>
+                    <div class="infor">
+                        <p class="des">{{ $value.productName }}</p>
+                        <p class="price">{{ $value.productPrice }}</p>
+                        <p class="com">
+                            <span>{{ $value.productQuote }}</span>
+                            <span>{{ $value.productCom }}</span>
+                        </p>
+                    </div>
+                    <!--<span class="xinxin">-->
+                        <!--<img src="./images/2017-08-30_211149.png" alt="">-->
+                        <!--<img src="./images/2017-08-30_211149.png" alt="">-->
+                        <!--<img src="./images/2017-08-30_211149.png" alt="">-->
+                        <!--<img src="./images/2017-08-30_211149.png" alt="">-->
+                        <!--<img src="./images/2017-08-30_211149.png" alt="">-->
+                    <!--</span>-->
+                </a>
+            </li>
+      {{ /each }}
+</script>
+
+<script type="text/template" id="tpl1">
+    {{ each   result   value i }}
+        <li>
+            <a href="productlist.html?categoryid={{ value.categoryId }}&pageid=1">
+                  <em data-i="{{ --i }}" class="top{{ ++i }}">{{ ++i }}</em>
+                <div>
+                    <p>{{ value.brandName }}</p>
+                    <p>{{ value.brandInfo }}</p>
+                </div>
+            </a>
+        </li>
+    {{ /each }}
+</script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/brand.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+@import "base.less";
+.category {
+   >ul{
+     border-radius: 5/20rem;
+     background: #ededed;
+     border: 1px solid #ccc;
+     font-size: 14/20rem;
+     color: #666;
+      >li{
+        //height:40/20rem;
+        //line-height: 40/20rem;
+        font-size: 16/20rem;
+        font-weight: 600;
+
+        >a{
+          position: relative;
+          box-sizing: border-box;
+          color:black;
+          display:block;
+          line-height: 40/20rem;
+          padding-left:16/20rem;
+          border-bottom:1px solid #ccc;
+        }
+        a.up{
+         &:before{
+               content:"";
+              display:block;
+              width:12/20rem;
+              height:12/20rem;
+              position: absolute;
+             border-top:1/20rem solid grey;
+             border-right:1/20rem solid grey;
+           transform:rotate(45deg);
+            top:0.8rem;
+           right:0.5rem;
+        }
+        }
+        a.down{
+          &:before{
+            content:"";
+            display:block;
+            width:12/20rem;
+            height:12/20rem;
+            position: absolute;
+            border-bottom:1/20rem solid grey;
+            border-right:1/20rem solid grey;
+            transform:rotate(45deg);
+            top:0.7rem;
+            right:0.5rem;
+          }
+        }
+      }
+     .category-goods{
+       background-color: white;
+       .clearfix();
+       li{
+         .fl();
+         box-sizing: border-box;
+         width:33.33%;
+         height:40/20rem;
+         line-height: 40/20rem;
+         font-size: 14/20rem;
+         border-right: 1px solid #ccc;
+         border-bottom: 1px solid #ccc;
+         a{
+           color:black!important;
+           font-weight: normal;
+           display:block;
+           height:40/20rem;
+           line-height:40/20rem;
+            text-align: center;
+         }
+       }
+     }
+   }
+}

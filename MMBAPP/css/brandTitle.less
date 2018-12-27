@@ -1,0 +1,63 @@
+@import "common.less";
+//商品分类
+.product-list{
+  height: 38/20rem;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 1/20rem solid #ebebeb;
+  border-bottom: 1/20rem solid #ccc;
+  line-height: 36/20rem;
+  padding-left: 8/20rem;
+  font-size: 14/20rem;
+  a{
+     color:black;
+  }
+
+}
+
+//品牌排行
+.product-mingci{
+  font-size: 16/20rem;
+  color: #874604;
+  height: 40/20rem;
+  padding-left: 10/20rem;
+  line-height: 40/20rem;
+  margin: 10/20rem 5/20rem;
+  border: 1/20rem solid #ccc;
+  background-color: #eee;
+}
+
+
+//品牌分类
+.category-title{
+  border-radius: 5/20rem;
+  background: #ededed;
+  border: 1/20rem solid #ccc;
+  font-size: 14/20rem;
+  color: #666;
+   li{
+     position: relative;
+     &:before{
+       content:"";
+       display:block;
+       width:14/20rem;
+       height:14/20rem;
+        border-bottom:1/20rem solid grey;
+       border-right:1/20rem solid grey;
+        transform:rotate(45deg)!important;
+       position: absolute;
+       right:10/20rem;
+         top:10/20rem;
+     }
+     a{
+       height: 40/20rem;
+       line-height: 40/20rem;
+       color: #000;
+       font-size: 16/20rem;
+       display: block;
+       padding-left: 16/20rem;
+       border-bottom: 1/20rem solid #ccc;
+       font-weight: bold;
+     }
+   }
+}

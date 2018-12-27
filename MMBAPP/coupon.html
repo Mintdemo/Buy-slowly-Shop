@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/coupon.css">
+    <script src="js/rem.js"></script>
+    <script src="js/art-template.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <a href="index.html" class="icon-back"></a>
+    </div>
+    <div class="right">
+        <a href="javascript:void(0)" class="icon-app"></a>
+    </div>
+    <div class="center">
+        <h1>优惠券</h1>
+    </div>
+</div>
+
+
+<ul class="coupon">
+</ul>
+
+<footer>
+    <div class="top">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#" class="img">返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<script type="text/template" id="tpl1">
+   {{ each result }}
+    <li>
+       <a href="{{ $value.couponLink}}?couponid={{$value.couponId }}">
+           <img src="{{ $value.couponImg }}" alt="">
+              <p>{{ $value.couponTitle }}</p>
+       </a>
+   </li>
+    {{ /each }}
+</script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/coupon.js"></script>
+</body>
+</html>

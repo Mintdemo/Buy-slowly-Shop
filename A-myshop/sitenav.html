@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/sitenav.css" />
+  </head>
+  <body>
+    <div class="shop_container">
+      <!-- 头部 -->
+      <div class="shop_header">
+        <div class="gohis"><a href="index.html"> </a></div>
+        <h1>商场导航</h1>
+        <div class="down"></div>
+      </div>
+      <!-- nav开始 -->
+      <div class="nav clearfix"><ul class="title"></ul></div>
+
+      <!-- footer -->
+      <div class="footer">
+        <div class="f_href">
+          <a href="#">登录</a> <a href="#">注册</a>
+          <a href="#" class="gotop">返回顶部</a>
+        </div>
+        <div class="content">
+          <p>
+            <span class="red">手机APP下载</span> 慢慢买手机版 -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/template" id="tpl1">
+      {{each result v i}}
+      <li>
+          <a href="{{v.navHref}}">
+            <img
+            src="{{v.navImg}}"
+            alt=""> <span>{{v.navTitle}}</span>
+          </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/art-template.js"></script>
+    <script src="./lib/flexible.js"></script>
+    <script src="js/common.js"></script>
+    <script src="./js/sitenav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+@import 'var.less';
+@import 'base.less';
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.shop_container {
+  max-width: 10rem /* 750/75 */;
+  width: 100%;
+  margin: 0 auto;
+}
+// 头部
+.shop_header {
+  height: 1.333333rem /* 100/75 */;
+  background-color: @themeColor;
+  position: relative;
+  .logo {
+    background-image: url(../images/header_logo.png);
+    background-size: contain;
+    width: 4.946667rem /* 371/75 */;
+    height: 0.666667rem /* 50/75 */;
+    position: absolute;
+    left: 0.466667rem /* 35/75 */;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .down {
+    background-image: url(../images/header_app.png);
+    width: 0.906667rem /* 68/75 */;
+    background-size: contain;
+    height: 0.906667rem /* 68/75 */;
+    position: absolute;
+    right: 0.133333rem /* 10/75 */;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.shop_header {
+  overflow: hidden;
+  .gohis {
+    a::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-left: 0.05rem solid white;
+      border-bottom: 0.05rem solid white;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 50%;
+      margin-top: -0.3rem;
+      left: 0.2rem /* 15/75 */;
+    }
+  }
+  h1 {
+    font-size: 0.6rem /* 30/75 */;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.2rem;
+  }
+}
+// 搜索
+.search {
+  height: 1.333333rem /* 100/75 */;
+  background-color: #fff;
+  padding: 0rem 0.266667rem /* 20/75 */;
+  font-size: 0.333333rem; /* 25/75 */
+
+  &_input {
+    height: 0.8rem /* 60/75 */;
+    width: 7.6rem /* 570/75 */;
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    margin-top: 0.266667rem /* 20/75 */;
+    padding-left: 0.133333rem /* 10/75 */;
+    font-size: 0.333333rem; /* 25/75 */
+    vertical-align: middle;
+  }
+  &_btn {
+    vertical-align: middle;
+    margin-top: 0.266667rem /* 20/75 */;
+    border-radius: 25px;
+    height: 0.8rem /* 60/75 */;
+    width: 1.733333rem /* 130/75 */;
+    background-color: @themeColor;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.466667rem /* 35/75 */;
+  }
+}
+// footer
+.footer {
+  margin-top: 0.4rem /* 30/75 */;
+  background-color: #f2f2f2;
+  .f_href {
+    height: 0.906667rem /* 68/75 */;
+    border-top: 0.013333rem /* 1/75 */ solid #ccc;
+    border-bottom: 0.013333rem /* 1/75 */ solid #ccc;
+    line-height: 0.906667rem /* 68/75 */;
+    a {
+      display: block;
+      text-align: center;
+      border-right: 0.013333rem /* 1/75 */ solid #ccc;
+      box-sizing: border-box;
+      width: 33.3%;
+      float: left;
+      font-size: 0.4rem; /* 30/75 */
+      position: relative;
+    }
+    .gotop:after {
+      position: absolute;
+      top: 0.266667rem /* 20/75 */;
+      left: 0.4rem /* 30/75 */;
+      content: '';
+      width: 0.4rem /* 30/75 */;
+      height: 0.4rem /* 30/75 */;
+      display: block;
+      background-image: url(../images/top.jpg);
+      background-size: cover;
+    }
+  }
+  .content {
+    padding: 0.4rem /* 30/75 */ 0rem /* 0/75 */;
+    p {
+      font-size: 0.32rem; /* 24/75 */
+      text-align: center;
+      .red {
+        color: #fe100b;
+      }
+    }
+  }
+}
+// 面包屑
+.bar {
+  height: 1rem /* 75/75 */ /* 80/75 */;
+  line-height: 1rem;
+  width: 100%;
+  background-image: linear-gradient(#fefefe, #eee);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.333333rem /* 25/75 */;
+  padding-left: 0.266667rem /* 20/75 */;
+  box-sizing: border-box;
+  color: black;
+  a {
+    color: black;
+  }
+  [type='button'] {
+    float: right;
+    width: 1.6rem /* 120/75 */;
+    height: 0.8rem /* 60/75 */;
+    margin-top: 0.08rem /* 6/75 */;
+    background-color: #e2e2e2;
+    font-size: 0.333333rem /* 25/75 */;
+    border-radius: 25px;
+  }
+}
+// 翻页
+.page {
+  padding-top: 0.266667rem /* 20/75 */;
+  select {
+    display: inline-block;
+    font-size: 0.373333rem; /* 28/75 */
+    padding: 0.333333rem /* 70/75 */ 0.373333rem /* 28/75 */;
+  }
+  .next,
+  .prev {
+    display: inline-block;
+    width: 2.2rem /* 165/75 */;
+    height: 0.8rem /* 60/75 */;
+    background-image: linear-gradient(#efefef, #d7d7d7);
+    border-radius: 15px;
+    margin: 0rem /* 0/75 */ 0.666667rem /* 50/75 */;
+    a {
+      color: black;
+      font-size: 0.4rem; /* 30/75 */
+      text-align: center;
+      line-height: 0.8rem /* 60/75 */;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

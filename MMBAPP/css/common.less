@@ -1,0 +1,367 @@
+@import url(base.less);
+
+
+.w50() {
+  width: 50%;
+}
+.w25() {
+  width: 25%;
+}
+.w20() {
+  width: 20%;
+}
+.w33() {
+  width: 33.333333%;
+}
+.fl() {
+  float: left;
+}
+.fr() {
+  float: right;
+}
+.db() {
+  display: block !important;
+}
+.dn() {
+  display: none;
+}
+/*单行溢出*/
+.one_txt_cut() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*多行溢出 手机端使用*/
+.txt_cut(@num:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @num;
+  -webkit-box-orient: vertical;
+}
+/* 水平垂直居中的公共类 */
+.center(){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+}
+/* 水平居中公共类 */
+.center-x(){
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
+}
+/* 垂直居中公共类 */
+.center-y(){
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);
+}
+.bgz(){
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.bz(){
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html{
+  max-width: 780px;
+  min-width:320px;
+  margin:0 auto;
+}
+body{
+  background-color: white;
+}
+
+//头部区域
+header{
+  max-width: 780px;
+  min-width: 320px;
+  height:2.5rem ;
+  background-color: #ff841d;
+  .left{
+    position: relative;
+    margin-right:48/20rem;
+    height:48/20rem;
+    line-height: 50/20rem;
+    a{
+      display:block;
+      width:185/20rem;
+      height:25/20rem;
+      .center-y();
+      margin-left:20/20rem;
+    }
+  }
+  .right{
+    .fr();
+    width:48/20rem;
+    height:48/20rem;
+    position: relative;
+    a{
+      display:block;
+      width:34/20rem;
+      height:34/20rem;
+      .center();
+    }
+
+  }
+}
+
+//搜索区域
+.search{
+  padding:10/20rem;
+  form{
+    width:300/20rem;
+    height:30/20rem;
+    .clearfix();
+    input[type=text]{
+      .fl();
+      width:230/20rem;
+      height:30/20rem;
+      font-size:13/20rem;
+      background-color: #f1f1f1;
+      text-indent: 15/20rem;
+      color:black;
+      border-radius: 15/20rem;
+    }
+    input[type=button]{
+      .fr();
+      width:63/20rem;
+      height:30/20rem;
+      background: #ff841d;
+      border-radius: 15/20rem;
+      color:white;
+      font-size: 16/20rem;
+    }
+  }
+}
+
+
+//底部
+footer{
+  background-color: #f1f1f1;
+  .top {
+    margin-top:20/20rem;
+    margin-bottom:15/20rem;
+    //margin:20/20rem 0 15/20rem 0;
+    .clearfix();
+    a{
+      width:33.33%;
+      text-align: center;
+      font-size:14/20rem;
+      height:33/20rem;
+      line-height: 33/20rem;
+      .fl();
+      box-sizing: border-box;
+      border:1px solid #ccc;
+    }
+    a:nth-child(1){
+      border-left:none;
+    }
+    a:nth-child(3){
+      border-right:none;
+    }
+    .img{
+
+      position: relative;
+      &:after{
+        content:"";
+        display:block;
+        position: absolute;
+        width:15/20rem;
+        height:15/20rem;
+        background: url("http://www.zuyushop.com/wap/images/top.jpg") 0 0 no-repeat;
+        background-size: 15/20rem;
+        background-position:  center;
+        .center-y();
+        left:10/20rem;
+      }
+
+    }
+  }
+  .bottom{
+    p{
+      text-align: center;
+      font-size: 12/20rem;
+    }
+    padding-bottom:10/20rem;
+  }
+}
+
+
+//面包削导航部分
+.show-infor-list{
+  height: 38/20rem;
+  box-sizing: border-box;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 1/20rem  solid #ebebeb;
+  border-bottom: 1/20rem  solid #ccc;
+  line-height: 38/20rem;
+  padding-left: 8/20rem;
+  font-size: 14/20rem;
+  .clearfix();
+  .left{
+    .fl();
+    a{
+      color:black;
+    }
+  }
+  .right{
+    .fr();
+    input{
+      width:60/20rem;
+      height:34/20rem;
+      line-height: 34/20rem;
+      background-color: lightgrey;
+      color:black;
+      border:none;
+      border-radius: 8/20rem;
+      font-size: 16/20rem;
+    }
+  }
+
+}
+
+
+//产品部分
+.product{
+  //padding: 14/20rem 0 8/20rem 0;
+  li{
+    padding:14/20rem 0 14/20rem 0;
+    border-bottom:1px solid #ccc;
+  }
+  a{
+    display:block;
+    .clearfix();
+    position: relative;
+  }
+  .pic{
+    width:110/20rem;
+    height:110/20rem;
+    margin-left:10/20rem;
+    .fl();
+  }
+  .infor{
+    margin-left:140/20rem;
+    color: #333333;
+    font-size: 15/20rem;
+    .title{
+      word-break: break-all;
+      p{
+        padding-right:10/20rem;
+      }
+      span{
+        color:#ff6c00;
+      }
+    }
+    .bottom{
+      position: absolute;
+      bottom:0;
+      .time{
+        color:#a1a1a1;
+        font-size: 12/20rem;
+        margin-top:10/20rem;
+      }
+      i {
+        width: 14/20rem;
+        height: 15/20rem;
+        display: inline-block;
+      }
+
+    }
+    .icon{
+      position: absolute;
+      bottom:0;
+      right:5/20rem;
+      color:#ccc;
+    }
+  }
+}
+
+
+//分页
+.page{
+  font-size: 0;
+  margin-top:10/20rem;
+  span{
+    display:inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width:33.33%;
+    font-size: 14/20rem;
+    height:33/20rem;
+    line-height: 33/20rem;
+    text-align: center;
+    a{
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+      border-bottom: 1px solid #bababa;
+      box-shadow: 0 0 1px #666;
+      border-radius: 5px;
+      padding:8/20rem 15/20rem;
+      font-size: 14/20rem;
+    }
+    #selectPage{
+      padding:8/20rem 15/20rem;
+      font-size: 14/20rem;
+    }
+  }
+}
+
+
+//顶部
+.header{
+  background: #ff841d;
+  color: #FFFFFF;
+  height: 44/20rem;
+  .clearfix();
+  .left{
+    .fl();
+    a{
+      display:block;
+      width:50/20rem;
+      height:44/20rem;
+      position: relative;
+      &:before{
+        content:"";
+        display:block;
+        position: absolute;
+        width:20/20rem;
+        height:20/20rem;
+        border-left:1/20rem solid white;
+        border-bottom:1/20rem solid white;
+        transform:rotate(45deg);
+        top:30%;
+        left:30%;
+        //transform:translate(-50%,-50%);
+      }
+    }
+  }
+  .right{
+    .fr();
+    a{
+      display:block;
+      width:50/20rem;
+      height:44/20rem;
+      background: url(http://m.manmanbuy.com/images/header_app.png) 0 0 no-repeat;
+      background-size: 32/20rem;
+      background-position: center;
+    }
+  }
+  .center{
+    margin: 0 50/20rem;
+    line-height: 44/20rem;
+    h1{
+      font-size: 20/20rem;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+

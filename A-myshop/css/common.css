@@ -1,0 +1,382 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+}
+/* 禁止缩放表单 */
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: #555;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+em,
+i {
+  font-style: normal;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input {
+  font-family: 'Microsoft YaHei';
+  outline: none;
+}
+/*单行溢出*/
+.one-txt-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*多行溢出*/
+.txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.shop_container {
+  max-width: 10rem /* 750/75 */;
+  width: 100%;
+  margin: 0 auto;
+}
+.shop_header {
+  height: 1.333333rem /* 100/75 */;
+  background-color: #ff841d;
+  position: relative;
+}
+.shop_header .logo {
+  background-image: url(../images/header_logo.png);
+  background-size: contain;
+  width: 4.946667rem /* 371/75 */;
+  height: 0.666667rem /* 50/75 */;
+  position: absolute;
+  left: 0.466667rem /* 35/75 */;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.shop_header .down {
+  background-image: url(../images/header_app.png);
+  width: 0.906667rem /* 68/75 */;
+  background-size: contain;
+  height: 0.906667rem /* 68/75 */;
+  position: absolute;
+  right: 0.133333rem /* 10/75 */;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.shop_header {
+  overflow: hidden;
+}
+.shop_header .gohis a::after {
+  content: '';
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-left: 0.05rem solid white;
+  border-bottom: 0.05rem solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  margin-top: -0.3rem;
+  left: 0.2rem /* 15/75 */;
+}
+.shop_header h1 {
+  font-size: 0.6rem /* 30/75 */;
+  color: #fff;
+  text-align: center;
+  margin-top: 0.2rem;
+}
+.search {
+  height: 1.333333rem /* 100/75 */;
+  background-color: #fff;
+  padding: 0rem 0.266667rem /* 20/75 */;
+  font-size: 0.333333rem;
+  /* 25/75 */
+}
+.search_input {
+  height: 0.8rem /* 60/75 */;
+  width: 7.6rem /* 570/75 */;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  margin-top: 0.266667rem /* 20/75 */;
+  padding-left: 0.133333rem /* 10/75 */;
+  font-size: 0.333333rem;
+  /* 25/75 */
+  vertical-align: middle;
+}
+.search_btn {
+  vertical-align: middle;
+  margin-top: 0.266667rem /* 20/75 */;
+  border-radius: 25px;
+  height: 0.8rem /* 60/75 */;
+  width: 1.733333rem /* 130/75 */;
+  background-color: #ff841d;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.466667rem /* 35/75 */;
+}
+.footer {
+  margin-top: 0.4rem /* 30/75 */;
+  background-color: #f2f2f2;
+}
+.footer .f_href {
+  height: 0.906667rem /* 68/75 */;
+  border-top: 0.013333rem /* 1/75 */ solid #cccccc;
+  border-bottom: 0.013333rem /* 1/75 */ solid #cccccc;
+  line-height: 0.906667rem /* 68/75 */;
+}
+.footer .f_href a {
+  display: block;
+  text-align: center;
+  border-right: 0.013333rem /* 1/75 */ solid #cccccc;
+  box-sizing: border-box;
+  width: 33.3%;
+  float: left;
+  font-size: 0.4rem;
+  /* 30/75 */
+  position: relative;
+}
+.footer .f_href .gotop:after {
+  position: absolute;
+  top: 0.266667rem /* 20/75 */;
+  left: 0.4rem /* 30/75 */;
+  content: '';
+  width: 0.4rem /* 30/75 */;
+  height: 0.4rem /* 30/75 */;
+  display: block;
+  background-image: url(../images/top.jpg);
+  background-size: cover;
+}
+.footer .content {
+  padding: 0.4rem /* 30/75 */ 0rem /* 0/75 */;
+}
+.footer .content p {
+  font-size: 0.32rem;
+  /* 24/75 */
+  text-align: center;
+}
+.footer .content p .red {
+  color: #fe100b;
+}
+.bar1 {
+  height: 1rem /* 75/75 */ /* 80/75 */;
+  line-height: 1rem;
+  width: 100%;
+  background-image: linear-gradient(#fefefe, #eeeeee);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.333333rem /* 25/75 */;
+  padding-left: 0.266667rem /* 20/75 */;
+  box-sizing: border-box;
+  color: black;
+}
+.bar1 a {
+  color: black;
+}
+.bar1 [type='button'] {
+  float: right;
+  width: 1.6rem /* 120/75 */;
+  height: 0.8rem /* 60/75 */;
+  margin-top: 0.08rem /* 6/75 */;
+  background-color: #e2e2e2;
+  font-size: 0.333333rem /* 25/75 */;
+  border-radius: 25px;
+}
+.page {
+  padding-top: 0.266667rem /* 20/75 */;
+}
+.page select {
+  display: inline-block;
+  font-size: 0.373333rem;
+  /* 28/75 */
+  padding: 0.333333rem /* 70/75 */ 0.373333rem /* 28/75 */;
+}
+.page .next,
+.page .prev {
+  display: inline-block;
+  width: 2.2rem /* 165/75 */;
+  height: 0.8rem /* 60/75 */;
+  background-image: linear-gradient(#efefef, #d7d7d7);
+  border-radius: 15px;
+  margin: 0rem /* 0/75 */ 0.666667rem /* 50/75 */;
+}
+.page .next a,
+.page .prev a {
+  color: black;
+  font-size: 0.4rem;
+  /* 30/75 */
+  text-align: center;
+  line-height: 0.8rem /* 60/75 */;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

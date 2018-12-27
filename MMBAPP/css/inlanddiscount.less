@@ -1,0 +1,45 @@
+@import "common.less";
+
+
+//折扣商品
+.discount{
+  .clearfix();
+  li{
+    a{
+      display:block;
+      padding-top:10/20rem;
+      .pic{
+        width:140/20rem;
+        height:140/20rem;
+      }
+      .title{
+        color: #333333;
+        padding:5/20rem  8/20rem;
+        font-size: 14/20rem;
+        font-weight: bold;
+        .txt_cut(2);
+        text-align: left;
+      }
+      .price{
+        color: #ff6c00;
+        margin-bottom: 4/20rem;
+        font-size: 14/20rem;
+        padding: 0 8/20rem;
+        text-align: left;
+        .txt_cut(1);
+      }
+      .infor{
+        color: #a1a1a1;
+        font-size: 12/20rem;
+        text-align: left;
+        padding-left:8/20rem;
+      }
+    }
+    box-sizing: border-box;
+    border:1px solid #eeeeee;
+    width:50%;
+    height:265/20rem;
+    padding: 10/20rem 0 0 10/20rem;
+    .fl();
+  };
+}
